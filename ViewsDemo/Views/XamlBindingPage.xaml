@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ViewsDemo.Views.XamlBindingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="XamlBindingPage"
+    Shell.NavBarIsVisible="False">
+    <VerticalStackLayout Spacing="20">
+        <Label
+            Margin="0,40"
+            BindingContext="{x:Reference MySlider}"
+            FontSize="48"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            Rotation="{Binding Value}"
+            Text="{Binding Value, StringFormat='{0:F2}°'}"
+            VerticalOptions="Center" />
+
+        <Slider
+            x:Name="MySlider"
+            Maximum="360"
+            MaximumTrackColor="{StaticResource Secondary}"
+            ThumbColor="{StaticResource Magenta}" />
+
+    </VerticalStackLayout>
+</ContentPage>

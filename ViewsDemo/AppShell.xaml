@@ -5,11 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ViewsDemo"
     xmlns:views="clr-namespace:ViewsDemo.Views"
-    Shell.FlyoutBehavior="Disabled"
-    Title="ViewsDemo">
+    Title="ViewsDemo"
+    Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <ShellContent Title="Presentation" ContentTemplate="{DataTemplate views:Presentation}"></ShellContent>
+        <ShellContent Title="Presentation" ContentTemplate="{DataTemplate views:Presentation}" />
+        <ShellContent Title="Commands" ContentTemplate="{DataTemplate views:CommandPage}" />
+        <ShellContent Title="Setter" ContentTemplate="{DataTemplate views:SettersPage}" />
+        <ShellContent Title="Editor" ContentTemplate="{DataTemplate views:EditingPage}" />
+        <ShellContent Title="Activity" ContentTemplate="{DataTemplate views:ActivityPage}" />
+        <ShellContent Title="XAML" ContentTemplate="{DataTemplate views:XamlBindingPage}" />
+        <ShellContent Title="C#" ContentTemplate="{DataTemplate views:CodeBindingPage}" />
     </TabBar>
 
 </Shell>
